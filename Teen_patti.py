@@ -1,12 +1,14 @@
 def round():
+	stake=0
 	temp_dict = data
 	print('Input the betting money after each displayed name\n ')
 	
 	while(len(temp_dict)>1):
-		for x in temp_dict.keys():
+		keys = temp_dict.keys()
+		for x in keys:
 			prompt = input(temp_dict[x])
 			if prompt.isdigit():
-				bet=prompt
+				bet=int(prompt)
 			else:
 				gameStatus=0
 				print('The game is over')
@@ -19,8 +21,8 @@ def round():
 				#the player has packed
 				del temp_dict[x]
 		
-
-global gameStatus = 1;
+stake=0
+gameStatus = 1;
 num = int(input("Enter number of players "))
 data={}
 
@@ -40,10 +42,9 @@ for i in range(1,num+1):
 	balance.update({i:INITIAL})
 while(gameStatus==1):
 	round()
-	winner = int(input(Enter player number who won the round))
+	winner = int(input('Enter player number who won the round'))
 	balance.update({winner:(balance[winner]+stake)})
 	print('The current balance of each player is ')
 	for x in balance.keys():
-		print(x + '	'+data[x]+'	'+ balance[x])
-
+		print(str(x) + '	'+data[x]+'	'+str(balance[x]))
 
