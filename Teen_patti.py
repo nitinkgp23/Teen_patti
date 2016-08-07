@@ -56,12 +56,17 @@ for i in range(1,num+1):
 
 while(gameStatus==1):
 	stake=round()
-	winner = int(input('Enter player number who won the round'))
-	balance.update({winner:(balance[winner]+stake)})
-	print('The current balance of each player is ')
-	for x in balance.keys():
-		print(str(x) + '	'+data[x]+'	'+str(balance[x]))
+	if(gameStatus==1):
+		winner = int(input('Enter player number who won the round'))
+		balance.update({winner:(balance[winner]+stake)})
+		print('The current balance of each player is ')
+		for x in balance.keys():
+			print(str(x) + '	'+data[x]+'	'+str(balance[x]))
 		# print (str(x) + '	'+ str(balance[x])
+	else:
+		print('The final balance of each player is ')
+		for x in balance.keys():
+			print(str(x) + '        '+data[x]+'     '+str(balance    [x]))
 
 	'''print('balance')
 	print(balance)
