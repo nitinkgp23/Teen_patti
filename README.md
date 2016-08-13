@@ -11,4 +11,4 @@ To use this, go to the terminal and type<br />
 
 To abort the game, input a non-integer when prompted for the betting money. 
 
-[1]: https://www.pagat.com/vying/teen_pathi.html
+[1]: https://www.pagat.com/vying/teen_pathi.html 
